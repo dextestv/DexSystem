@@ -58,3 +58,6 @@
 
 Готовый файл будет лежать в $modulename/build/dex
 
+Готовый файл:
+
+    Для файла с package: b.testFragment и основным классом(который вы хотите загружать) testFragment, загрузка будет выглядеть как: .dexload b.testFragment.testFragment $url
