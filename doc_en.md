@@ -12,7 +12,7 @@ Create a new Android Library (File -> New -> New module -> Android Library).
 ### build.gradle
 
 Next, you need to specify the dependencies:
-groovy
+
 
     compileOnly project(':TMessagesProj')
     compileOnly 'com.aliucord:Aliuhook:1.1.3'
@@ -28,12 +28,12 @@ You must add the aliuhook repository:
     maven { url 'https://maven.aliucord.com/snapshots' }
 
 Configuring Gradle for Quick .dex File Generation (by ChatGPT)
-groovy
 
-tasks.register("aarToDex", Exec) {
-    dependsOn "assembleRelease"
-    group = "build"
-    description = "Builds a DEX file from the module's AAR."
+
+    tasks.register("aarToDex", Exec) {
+        dependsOn "assembleRelease"
+        group = "build"
+        description = "Builds a DEX file from the module's AAR."
 
     doFirst {
         def aarPath = "$buildDir/outputs/aar/${project.name}-release.aar"
@@ -53,7 +53,7 @@ tasks.register("aarToDex", Exec) {
     }
 
 After adding this, run buildDex either through the Android Studio Gradle panel or via the command line.
-shell
+
 
     .\gradlew buildDex
 
